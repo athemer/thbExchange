@@ -1,0 +1,6 @@
+framework module Pods_thbExchangeTests {
+  umbrella header "Pods-thbExchangeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
