@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         
         scrapeNYCMetalScene()
         scrapeBangkok()
+        scrapeSuperRich()
         
     }
 
@@ -64,7 +65,9 @@ class ViewController: UIViewController {
         //http://rate.bot.com.tw/xrt?Lang=zh-TW 台灣銀行
         //http://nycmetalscene.com metal
         
-        Alamofire.request("http://www.bbl.com.tw/exrate.asp").responseString { response in
+        Alamofire.request("https://www.superrichthailand.com/#!/en/exchange#rate-section").responseString {
+            
+            response in
             
             print("superRich Boolean , \(response.result.isSuccess)")
             if let html = response.result.value {
@@ -183,4 +186,7 @@ class ViewController: UIViewController {
 
 //html/body/div[1]/main/div[4]/table/tbody/tr[12]/td[2]
 //*[@id="container"]/center/table/tbody/tr[5]/td[3]
+
+
+//*[@id="print-table"]/tbody[15]/tr/td[3]/div/div/span   superrich
 
